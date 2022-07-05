@@ -1,11 +1,18 @@
 <!DOCTYPE html>
-<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Windows Boot Screen</title>
     <style>
-        body{
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
             display: flex;
             background-color: black;
             background-size: cover;
@@ -13,20 +20,11 @@
             align-items: flex-end;
             width: 100vw;
             height: 100vh;
-          	overflow: hidden;
+            overflow: hidden;
         }
 
-        *{
-            margin: 0;
-            padding: 0;
-        }
-        body{
-            margin: 0;
-            padding: 0;
-            height: 100vh;
-            background: #000;
-        }
-        div.microsoft{
+
+        .microsoft {
             position: absolute;
             top: 50%;
             left: 50%;
@@ -34,7 +32,8 @@
             height: 200px;
             width: 250px;
         }
-        div .microsoft{
+
+        .microsoft span {
             position: absolute;
             top: 0;
             left: 0;
@@ -42,32 +41,35 @@
             width: 120px;
             background: #03a9f4;
         }
-        div span:nth-child(2){
+
+        div span:nth-child(2) {
             top: 0;
             left: 52%;
         }
-        div span:nth-child(3){
+
+        div span:nth-child(3) {
             top: 53%;
             left: 0;
         }
-        div span:nth-child(4){
+
+        div span:nth-child(4) {
             top: 53%;
             left: 52%;
         }
 
 
-        .spinner{
+        .spinner {
             width: 70px;
             height: 70px;
             position: relative;
             align-self: flex-end;
             margin-bottom: 5%;
             flex-direction: column;
-          margin-left: -33px;
+            margin-left: -33px;
 
         }
 
-        .spinner .dot{
+        .spinner .dot {
             position: absolute;
             inset: 0;
             display: flex;
@@ -75,78 +77,42 @@
             justify-content: center;
         }
 
-        .spinner .dot::after{
+        .spinner .dot::after {
             content: '';
             width: 8px;
             height: 8px;
             border-radius: 4px;
             background-color: #fff;
         }
-        .spinner .dot{
+
+        .spinner .dot {
             animation: spin 1.8s infinite;
         }
-        @keyframes spin{
-            to{
+
+        @keyframes spin {
+            to {
                 transform: rotate(360deg);
             }
         }
 
-        .spinner .dot:nth-child(2){
+        .spinner .dot:nth-child(2) {
             animation-delay: 100ms;
         }
-        .spinner .dot:nth-child(3){
+
+        .spinner .dot:nth-child(3) {
             animation-delay: 200ms;
         }
-        .spinner .dot:nth-child(4){
+
+        .spinner .dot:nth-child(4) {
             animation-delay: 300ms;
         }
-        .spinner .dot:nth-child(5){
+
+        .spinner .dot:nth-child(5) {
             animation-delay: 400ms;
         }
-
-        *{
-            margin: 0;
-            padding: 0;
-        }
-        body{
-            margin: 0;
-            padding: 0;
-            height: 100vh;
-            background: #000;
-        }
-        .microsoft{
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%) perspective(200px) rotateY(-25deg);
-            height: 200px;
-            width: 250px;
-        }
-        .microsoft span{
-            position: absolute;
-            top: 0;
-            left: 0;
-            height: 95px;
-            width: 120px;
-            background: #03a9f4;
-        }
-        .microsoft span:nth-child(2){
-            top: 0;
-            left: 52%;
-        }
-        .microsoft div span:nth-child(3){
-            top: 53%;
-            left: 0;
-        }
-        .microsoft span:nth-child(4){
-            top: 53%;
-            left: 52%;
-        }
-
-
-
     </style>
 </head>
+
 <body>
     <div class="microsoft">
         <span></span>
@@ -163,4 +129,6 @@
         <div class="dot"></div>
     </div>
 
-</body></html>
+</body>
+
+</html>
